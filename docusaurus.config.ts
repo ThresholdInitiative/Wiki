@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'ThresholdInitiative',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'ThresholdInitiative Official Wiki',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
