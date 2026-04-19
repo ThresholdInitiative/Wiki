@@ -8,9 +8,9 @@ interface RelatedLink {
 }
 
 interface RelatedBarProps {
-  label?:  string
-  links:   RelatedLink[]
-  quote?:  string
+  label?:     string
+  links:      RelatedLink[]
+  quote?:     string
   className?: string
 }
 
@@ -47,7 +47,7 @@ export function RelatedBar({
       <p style={{ margin: quote ? '0 0 0.75rem' : 0, color: '#888888' }}>
         {links.map((link, i) => (
           <React.Fragment key={link.href}>
-            
+            <a
               href={link.href}
               style={{ color: '#888888', textDecoration: 'none' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#e0e0e0')}
@@ -65,10 +65,10 @@ export function RelatedBar({
       {quote && (
         <p
           style={{
-            margin:     0,
-            color:      '#333333',
-            fontStyle:  'italic',
-            fontSize:   '0.5625rem',
+            margin:    0,
+            color:     '#333333',
+            fontStyle: 'italic',
+            fontSize:  '0.5625rem',
           }}
         >
           "{quote}"

@@ -71,7 +71,6 @@ function NavCard({ item }: { item: NavItem }) {
         className={styles.navCardImage}
         loading="lazy"
         onError={e => {
-          // 图片不存在时用占位色块
           const el = e.currentTarget as HTMLImageElement
           el.style.display = 'none'
           const placeholder = document.createElement('div')
@@ -104,7 +103,7 @@ function Sidebar() {
         </div>
         <div className={styles.sidePanelBody}>
           This is the official knowledge archive for{' '}
-          
+          <a                                              {/* ← 补回 */}
             href="https://www.roblox.com/games/135415882857772"
             target="_blank"
             rel="noopener noreferrer"
@@ -117,7 +116,7 @@ function Sidebar() {
         <div className={styles.sidePanelRow}>
           <p className={styles.sidePanelRowLabel}>DEVELOPER</p>
           <p className={styles.sidePanelRowValue}>
-            
+            <a                                            {/* ← 补回 */}
               href="https://www.roblox.com/users/5252077194/profile"
               target="_blank"
               rel="noopener noreferrer"
@@ -130,7 +129,7 @@ function Sidebar() {
         <div className={styles.sidePanelRow}>
           <p className={styles.sidePanelRowLabel}>COMMUNITY</p>
           <p className={styles.sidePanelRowValue}>
-            
+            <a                                            {/* ← 补回 */}
               href="https://www.roblox.com/communities/1054225670/On-site-Roleplay-Community"
               target="_blank"
               rel="noopener noreferrer"
@@ -147,7 +146,7 @@ function Sidebar() {
           <p className={styles.sidePanelRowValue}>
             Appeal bans · Join factions · Latest announcements
           </p>
-          
+          <a                                              {/* ← 补回 */}
             href="https://discord.gg/5kujGKDrr8"
             target="_blank"
             rel="noopener noreferrer"
@@ -170,11 +169,11 @@ function Sidebar() {
         </div>
 
         {[
-          { label: 'Facility Protocols',    href: '/docs/facility-protocols' },
-          { label: 'Warhead Initiative',    href: '/docs/lore/warhead-initiative' },
-          { label: 'Chain of Oversight',   href: '/docs/staff' },
-          { label: 'Community Factions',   href: '/docs/faction' },
-          { label: 'Lore Archive',         href: '/docs/lore' },
+          { label: 'Facility Protocols',  href: '/docs/facility-protocols' },
+          { label: 'Warhead Initiative',  href: '/docs/lore/warhead-initiative' },
+          { label: 'Chain of Oversight',  href: '/docs/staff' },
+          { label: 'Community Factions',  href: '/docs/faction' },
+          { label: 'Lore Archive',        href: '/docs/lore' },
         ].map(link => (
           <div
             key={link.href}
@@ -184,15 +183,15 @@ function Sidebar() {
             <Link
               to={link.href}
               style={{
-                fontFamily:    'var(--ifm-font-family-monospace)',
-                fontSize:      '0.6875rem',
-                color:         '#666666',
-                textDecoration:'none',
-                letterSpacing: '0.05em',
-                display:       'flex',
-                alignItems:    'center',
-                gap:           '0.5rem',
-                transition:    'color 200ms ease',
+                fontFamily:     'var(--ifm-font-family-monospace)',
+                fontSize:       '0.6875rem',
+                color:          '#666666',
+                textDecoration: 'none',
+                letterSpacing:  '0.05em',
+                display:        'flex',
+                alignItems:     'center',
+                gap:            '0.5rem',
+                transition:     'color 200ms ease',
               }}
               onMouseEnter={e => (e.currentTarget.style.color = '#aaaaaa')}
               onMouseLeave={e => (e.currentTarget.style.color = '#666666')}
