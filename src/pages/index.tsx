@@ -103,7 +103,7 @@ function Sidebar() {
         </div>
         <div className={styles.sidePanelBody}>
           This is the official knowledge archive for{' '}
-          <a                                              {/* ← 补回 */}
+          <a
             href="https://www.roblox.com/games/135415882857772"
             target="_blank"
             rel="noopener noreferrer"
@@ -116,7 +116,7 @@ function Sidebar() {
         <div className={styles.sidePanelRow}>
           <p className={styles.sidePanelRowLabel}>DEVELOPER</p>
           <p className={styles.sidePanelRowValue}>
-            <a                                            {/* ← 补回 */}
+            <a       
               href="https://www.roblox.com/users/5252077194/profile"
               target="_blank"
               rel="noopener noreferrer"
@@ -129,7 +129,7 @@ function Sidebar() {
         <div className={styles.sidePanelRow}>
           <p className={styles.sidePanelRowLabel}>COMMUNITY</p>
           <p className={styles.sidePanelRowValue}>
-            <a                                            {/* ← 补回 */}
+            <a                                            
               href="https://www.roblox.com/communities/1054225670/On-site-Roleplay-Community"
               target="_blank"
               rel="noopener noreferrer"
@@ -146,7 +146,7 @@ function Sidebar() {
           <p className={styles.sidePanelRowValue}>
             Appeal bans · Join factions · Latest announcements
           </p>
-          <a                                              {/* ← 补回 */}
+          <a                                           
             href="https://discord.gg/5kujGKDrr8"
             target="_blank"
             rel="noopener noreferrer"
