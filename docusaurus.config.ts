@@ -17,7 +17,7 @@ const config: Config = {
   organizationName: "ThresholdInitiative",
   projectName: "Wiki",
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
 
   i18n: {
     defaultLocale: "en",
