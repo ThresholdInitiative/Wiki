@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'ThresholdInitiative',
-  tagline: 'ThresholdInitiative Official Wiki',
+  title: 'ThresholdInitiative,
+  tagline: 'ThresholdInitiative Offical Wiki',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -22,8 +22,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ThresholdInitiative', // Usually your GitHub org/user name.
-  projectName: 'Wiki', // Usually your repo name.
+  organizationName: 'facebook', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -62,7 +62,10 @@ const config: Config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [
+    		require.resolve("./src/css/custom.css"),
+   	 	require.resolve("./src/css/tailwind.css"),
+	  ],
         },
       } satisfies Preset.Options,
     ],
