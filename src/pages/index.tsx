@@ -116,7 +116,7 @@ function Sidebar() {
         <div className={styles.sidePanelRow}>
           <p className={styles.sidePanelRowLabel}>DEVELOPER</p>
           <p className={styles.sidePanelRowValue}>
-            <a       
+            <a
               href="https://www.roblox.com/users/5252077194/profile"
               target="_blank"
               rel="noopener noreferrer"
@@ -129,7 +129,7 @@ function Sidebar() {
         <div className={styles.sidePanelRow}>
           <p className={styles.sidePanelRowLabel}>COMMUNITY</p>
           <p className={styles.sidePanelRowValue}>
-            <a                                            
+            <a
               href="https://www.roblox.com/communities/1054225670/On-site-Roleplay-Community"
               target="_blank"
               rel="noopener noreferrer"
@@ -139,26 +139,26 @@ function Sidebar() {
           </p>
         </div>
 
-        <div className={styles.sidePanelRow}>
-          <p className={styles.sidePanelRowLabel} style={{ color: '#664400' }}>
-            OFFICIAL DISCORD
-          </p>
-          <p className={styles.sidePanelRowValue}>
-            Appeal bans · Join factions · Latest announcements
-          </p>
-          <a                                           
-            href="https://discord.gg/5kujGKDrr8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.discordButton}
-          >
-            JOIN DISCORD SERVER
-          </a>
-        </div>
-
         <p className={styles.sideStatus}>
           ARCHIVE STATUS: OPEN · PUBLIC ACCESS
         </p>
+      </div>
+
+      {/* Discord Widget */}
+      <div style={{ marginTop: '0.75rem' }}>
+        <iframe
+          src="https://discord.com/widget?id=1312447590700417057&theme=dark"
+          width="100%"
+          height="500"
+          allowTransparency={true}
+          frameBorder="0"
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+          style={{
+            borderRadius: '4px',
+            border:       '1px solid #1a1a1a',
+            display:      'block',
+          }}
+        />
       </div>
 
       {/* Quick links panel */}
