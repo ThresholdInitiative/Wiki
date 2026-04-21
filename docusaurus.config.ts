@@ -5,7 +5,7 @@ import type * as Preset          from '@docusaurus/preset-classic'
 
 const config: Config = {
   title:   'ThresholdInitiative',
-  tagline: 'On-Site: Roleplay — Official Knowledge Archive',
+  tagline: 'ThresholdInitiative — Official Knowledge Archive',
   favicon: 'img/favicon.ico',
 
   future: { v4: true },
@@ -168,16 +168,16 @@ const config: Config = {
   // ── Plugins ──────────────────────────────────────────────────
   plugins: [
     // 如需 Tailwind，取消注释
-    // async function tailwindPlugin() {
-    //   return {
-    //     name: 'tailwind-plugin',
-    //     configurePostCss(postcssOptions) {
-    //       postcssOptions.plugins.push(require('tailwindcss'))
-    //       postcssOptions.plugins.push(require('autoprefixer'))
-    //       return postcssOptions
-    //     },
-    //   }
-    // },
+       async function tailwindPlugin() {
+         return {
+           name: 'tailwind-plugin',
+           configurePostCss(postcssOptions) {
+             postcssOptions.plugins.push(require('tailwindcss'))
+             postcssOptions.plugins.push(require('autoprefixer'))
+             return postcssOptions
+           },
+         }
+       },
   ],
 }
 
