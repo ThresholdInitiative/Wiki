@@ -155,15 +155,15 @@ const config: Config = {
     },
 
     // ── Announcement bar（可选） ──────────────────────────────────
-    announcementBar: {
-      id:              'wiki-status',
-      content:
-        '⚠ This wiki is actively being built. Some pages may be incomplete or placeholder only.',
-      backgroundColor: '#111111',
-      textColor:       '#888888',
-      isCloseable:     true,
-    },
-  } satisfies Preset.ThemeConfig,
+    //announcementBar: {
+     // id:              'wiki-status',
+     // content:
+       // '⚠ This wiki is actively being built. Some pages may be incomplete or placeholder only.',
+     // backgroundColor: '#111111',
+     // textColor:       '#888888',
+     // isCloseable:     true,
+   // },
+  // } satisfies Preset.ThemeConfig,
 
   // ── Plugins ──────────────────────────────────────────────────
   plugins: [
