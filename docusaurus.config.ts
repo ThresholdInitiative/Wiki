@@ -1,45 +1,42 @@
-import { themes as prismThemes } from "prism-react-renderer";
-import type { Config } from "@docusaurus/types";
-import type * as Preset from "@docusaurus/preset-classic";
+// docusaurus.config.ts
+import { themes as prismThemes } from 'prism-react-renderer'
+import type { Config }           from '@docusaurus/types'
+import type * as Preset          from '@docusaurus/preset-classic'
 
 const config: Config = {
-  title: "ThresholdInitiative",
-  tagline: "ThresholdInitiative Official Wiki",
-  favicon: "img/favicon.ico",
+  title:   'ThresholdInitiative',
+  tagline: 'On-Site: Roleplay — Official Knowledge Archive',
+  favicon: 'img/favicon.ico',
 
-  future: {
-    v4: true,
-  },
+  future: { v4: true },
 
-  url: "https://thres-wiki.vospek.com",
-  baseUrl: "/",
-
-  organizationName: "ThresholdInitiative",
-  projectName: "Wiki",
-
-  onBrokenLinks: "warn",
+  url:              'https://thres-wiki.vospek.com',
+  baseUrl:          '/',
+  organizationName: 'ThresholdInitiative',
+  projectName:      'Wiki',
+  onBrokenLinks:    'warn',
 
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'en',
+    locales:       ['en'],
   },
 
   presets: [
     [
-      "classic",
+      'classic',
       {
         docs: {
-          sidebarPath: "./sidebars.ts",
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          sidebarPath:    './sidebars.ts',
+          // 去掉 editUrl，不暴露 GitHub 源码链接
+          editUrl:        undefined,
+          // 显示文档最后更新时间
+          showLastUpdateTime: true,
         },
-
-        blog: false,
-
+        blog:  false,
         theme: {
           customCss: [
-            require.resolve("./src/css/custom.css"),
-            require.resolve("./src/css/tailwind.css"),
+            require.resolve('./src/css/custom.css'),
+            require.resolve('./src/css/tailwind.css'),
           ],
         },
       } satisfies Preset.Options,
@@ -47,55 +44,141 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: "img/docusaurus-social-card.jpg",
+    // 社交预览图
+    image: 'img/social-card.jpg',
 
+    // 强制深色模式，禁用切换按钮
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode:            'dark',
+      disableSwitch:          true,
+      respectPrefersColorScheme: false,
     },
 
+    // ── Navbar ───────────────────────────────────────────────────
     navbar: {
-      title: "ThresholdInitiative",
+      title: 'ThresholdInitiative',
       logo: {
-        alt: "ThresholdInitiative Logo",
-        src: "img/logo.png",
+        alt: 'ThresholdInitiative',
+        src: 'img/logo.png',
       },
+      style: 'dark',
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Docs",
+          type:      'docSidebar',
+          sidebarId: 'wikiSidebar',
+          position:  'left',
+          label:     'Archive',
         },
         {
-          href: "https://github.com/facebook/docusaurus",
-          label: "GitHub",
-          position: "right",
+          to:       '/docs/lore',
+          label:    'Lore',
+          position: 'left',
+        },
+        {
+          to:       '/docs/rules',
+          label:    'Rules',
+          position: 'left',
+        },
+        {
+          to:       '/docs/facility-protocols',
+          label:    'Protocols',
+          position: 'left',
+        },
+        {
+          to:       '/docs/staff',
+          label:    'Staff',
+          position: 'left',
+        },
+        // 右侧
+        {
+          href:     'https://discord.gg/5kujGKDrr8',
+          label:    'Discord',
+          position: 'right',
+        },
+        {
+          href:     'https://www.roblox.com/games/135415882857772',
+          label:    'Play',
+          position: 'right',
         },
       ],
     },
 
+    // ── Footer ───────────────────────────────────────────────────
     footer: {
-      style: "dark",
+      style: 'dark',
       links: [
         {
-          title: "Docs",
-          items: [{ label: "Intro", to: "/docs/intro" }],
+          title: 'Archive',
+          items: [
+            { label: 'Lore',               to:   '/docs/lore' },
+            { label: 'Facility Protocols', to:   '/docs/facility-protocols' },
+            { label: 'Clearance Levels',   to:   '/docs/clearance-levels' },
+            { label: 'Rules',              to:   '/docs/rules' },
+          ],
         },
         {
-          title: "Community",
+          title: 'Teams & Factions',
           items: [
-            { label: "Discord", href: "https://discord.gg/5kujGKDrr8" },
+            { label: 'Teams',              to:   '/docs/teams' },
+            { label: 'Community Factions', to:   '/docs/faction' },
+            { label: 'Chain of Oversight', to:   '/docs/staff' },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            { label: 'Discord',            href: 'https://discord.gg/5kujGKDrr8' },
+            { label: 'Roblox Game',        href: 'https://www.roblox.com/games/135415882857772' },
+            { label: 'Roblox Group',       href: 'https://www.roblox.com/communities/1054225670/On-site-Roleplay-Community' },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} ThresholdInitiative.`,
+      copyright: [
+        `Copyright © ${new Date().getFullYear()} ThresholdInitiative.`,
+        'All lore and content are original works of the On-Site: Roleplay development team.',
+      ].join(' '),
     },
 
+    // ── Code highlight ───────────────────────────────────────────
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme:       prismThemes.vsDark,
+      darkTheme:   prismThemes.vsDark,
+      additionalLanguages: ['typescript', 'tsx', 'bash', 'json'],
+    },
+
+    // ── Docs ─────────────────────────────────────────────────────
+    docs: {
+      sidebar: {
+        hideable:              true,
+        autoCollapseCategories: true,
+      },
+    },
+
+    // ── Announcement bar（可选） ──────────────────────────────────
+    announcementBar: {
+      id:              'wiki-status',
+      content:
+        '⚠ This wiki is actively being built. Some pages may be incomplete or placeholder only.',
+      backgroundColor: '#111111',
+      textColor:       '#888888',
+      isCloseable:     true,
     },
   } satisfies Preset.ThemeConfig,
-};
 
-export default config;
+  // ── Plugins ──────────────────────────────────────────────────
+  plugins: [
+    // 如需 Tailwind，取消注释
+    // async function tailwindPlugin() {
+    //   return {
+    //     name: 'tailwind-plugin',
+    //     configurePostCss(postcssOptions) {
+    //       postcssOptions.plugins.push(require('tailwindcss'))
+    //       postcssOptions.plugins.push(require('autoprefixer'))
+    //       return postcssOptions
+    //     },
+    //   }
+    // },
+  ],
+}
+
+export default config
