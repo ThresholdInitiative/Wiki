@@ -135,7 +135,7 @@ const config: Config = {
       ],
       copyright: [
         `Copyright © ${new Date().getFullYear()} ThresholdInitiative.`,
-        'All lore and content are original works of the On-Site: Roleplay development team.',
+        'All lore and content are original works of the Threshold Initiative development team.',
       ].join(' '),
     },
 
