@@ -8,6 +8,22 @@ const config: Config = {
   tagline: 'On-Site: Roleplay — Official Knowledge Archive',
   favicon: 'img/favicon.ico',
 
+  // 注入结构化数据 JSON-LD
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'application/ld+json',
+      },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'On-Site: Roleplay — Official Knowledge Archive',
+        url: 'https://thres-wiki.vospek.com/'
+      }),
+    },
+  ],
+
   future: { v4: true },
 
   url:              'https://thres-wiki.vospek.com',
@@ -57,6 +73,8 @@ const config: Config = {
     metadata: [
       { name: 'keywords', content: 'On-Site, Roleplay, Roblox, SCP, Threshold Initiative, Wiki, Lore, RP' },
       { name: 'twitter:card', content: 'summary_large_image' },
+      { property: 'og:site_name', content: 'On-Site: Roleplay' },
+      { property: 'og:locale', content: 'en_US' },
     ],
 
     // 强制深色模式，禁用切换按钮

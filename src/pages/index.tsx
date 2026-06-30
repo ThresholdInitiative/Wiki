@@ -877,7 +877,7 @@ export default function Home(): React.ReactElement {
 
   return (
     <Layout
-      title="On-Site: Roleplay — Official Knowledge Archive"
+      title="Official Knowledge Archive"
       description="The official knowledge archive for On-Site: Roleplay — lore, protocols, clearance levels, and operational directives."
     >
       {/* Inject CSS */}
