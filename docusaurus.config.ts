@@ -174,8 +174,8 @@ const config: Config = {
      // backgroundColor: '#111111',
      // textColor:       '#888888',
      // isCloseable:     true,
-   // },
-  // } satisfies Preset.ThemeConfig,
+    // },
+  } satisfies Preset.ThemeConfig,
 
   // ── Plugins ──────────────────────────────────────────────────
   plugins: [
