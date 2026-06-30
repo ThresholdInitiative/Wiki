@@ -1,6 +1,6 @@
 [build]
-  # 优先使用 pnpm 进行构建
-  command = "corepack enable pnpm && pnpm install --frozen-lockfile && pnpm build"
+  # 优先使用 pnpm 进行构建，并清除可能导致旧文档残留的 Docusaurus 缓存
+  command = "corepack enable pnpm && pnpm install --frozen-lockfile && pnpm clear && pnpm build"
   publish = "build"
 
 [build.environment]
